@@ -13,8 +13,29 @@ const char* get_message() {
         "I am so lucky to have you.",
         "Just a little reminder that I adore you.",
         "You make everything better.",
-	"I love you Sampoorna",
-	"Thanks for burning yourself and giving me light, you are my candle."
+		"I love you Sampoorna",
+		"Thanks for burning yourself and giving me light, you are my candle."
+		"You are my sunshine on cloudy days."
+		"Every moment with you feels magical."
+		"You make my heart smile."
+		"I still get excited every time I see you."
+		"You are the best part of my day."
+		"My favorite place is next to you."
+		"You make ordinary moments special."
+		"I love your cute little smile."
+		"You are my happy thought."
+		"Even stars look dull beside you."
+		"You are the reason I believe in love."
+		"I could listen to your voice forever."
+		"You are my comfort person."
+		"Loving you is the easiest thing ever."
+		"You are sweeter than my favorite dessert."
+		"I hope you know how special you are to me."
+		"You make my world brighter."
+		"You are my favorite notification."
+		"No matter what happens, I’ll choose you."
+		"You are the cutest chapter of my life."
+		"If hugs could talk, mine would say ‘I love you.’
     };
     
     // Calculate the number of messages in the array
