@@ -13,7 +13,7 @@ const char* get_message() {
         "I am so lucky to have you.",
         "Just a little reminder that I adore you.",
         "You make everything better.",
-		"I love you Sampoorna",
+		"Monu loves you Sampoorna",
 		"Thanks for burning yourself and giving me light, you are my candle."
 		"You are my sunshine on cloudy days."
 		"Every moment with you feels magical."
