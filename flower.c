@@ -57,58 +57,58 @@ int main(void) {
 
     const char* chosen_message = get_message();
 
-    /* Six-frame growth animation: seed -> sprout -> stem -> bud -> opening -> full bloom */
+    /* Six-frame growth animation: seed -> sprout -> stem -> bud -> opening -> full bloom.
+       Frames 1-3 and 6 keep the original's proven layout and spacing (just colorized);
+       frames 4-5 are new in-between stages so the bloom opens smoothly instead of
+       jumping straight from a closed bud to a full flower. */
     const char *frames[] = {
 
-        /* Frame 1: a seed resting in the soil */
-        "\n\n\n\n\n"
-        "        " YELLOW "." RESET "\n"
-        "     " GREEN "~~~~~~~~~~~" RESET "\n",
-
-        /* Frame 2: a tiny sprout pokes through */
+        /* Frame 1: a seed in the soil (same shape as the original frame 1) */
         "\n\n\n\n"
-        "        " GREEN "!" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "     " GREEN "~~~~~~~~~~~" RESET "\n",
+        "       " YELLOW "." RESET "\n"
+        "      " GREEN "/ \\" RESET "\n"
+        "    " GREEN "=======" RESET "\n",
 
-        /* Frame 3: the stem grows, first leaves unfurl */
+        /* Frame 2: growing taller (same shape as the original frame 2) */
         "\n\n\n"
-        "        " GREEN "|" RESET "\n"
-        "      " GREEN "\\ |" RESET "\n"
-        "        " GREEN "|" RESET " " GREEN "/" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "     " GREEN "~~~~~~~~~~~" RESET "\n",
+        "       " GREEN "|" RESET "\n"
+        "      " GREEN "\\|/" RESET "\n"
+        "       " GREEN "|" RESET "\n"
+        "    " GREEN "=======" RESET "\n",
 
-        /* Frame 4: a bud forms at the top */
+        /* Frame 3: a closed bud appears (same shape as the original frame 3) */
         "\n\n"
-        "       " GREEN "(" YELLOW "o" GREEN ")" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "      " GREEN "\\_|" RESET "\n"
-        "        " GREEN "|" RESET " " GREEN "/" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "     " GREEN "~~~~~~~~~~~" RESET "\n",
+        "      " GREEN "(" RESET " " GREEN ")" RESET "\n"
+        "       " GREEN "|" RESET "\n"
+        "     " GREEN "\\ | /" RESET "\n"
+        "      " GREEN "\\|/" RESET "\n"
+        "    " GREEN "=======" RESET "\n",
 
-        /* Frame 5: the bud starts to open */
+        /* Frame 4: the bud starts to blush and open */
+        "\n\n"
+        "      " MAGENTA "(" YELLOW "@" MAGENTA ")" RESET "\n"
+        "       " GREEN "|" RESET "\n"
+        "     " GREEN "\\ | /" RESET "\n"
+        "      " GREEN "\\|/" RESET "\n"
+        "    " GREEN "=======" RESET "\n",
+
+        /* Frame 5: petals emerging, almost there */
         "\n"
-        "      " MAGENTA "." RESET GREEN "(" RESET YELLOW "@" RESET GREEN ")" RESET MAGENTA "." RESET "\n"
-        "       " GREEN "\\_|_/" RESET "\n"
-        "         " GREEN "|" RESET "\n"
-        "       " GREEN "\\_|" RESET "\n"
-        "         " GREEN "|" RESET " " GREEN "/" RESET "\n"
-        "         " GREEN "|" RESET "\n"
-        "      " GREEN "~~~~~~~~~~~" RESET "\n",
+        "     " BOLD RED "(_)" YELLOW "@" RED "(_)" RESET "\n"
+        "       " GREEN "|" RESET "\n"
+        "     " GREEN "\\ | /" RESET "\n"
+        "      " GREEN "\\|/" RESET "\n"
+        "    " GREEN "=======" RESET "\n",
 
-        /* Frame 6: full bloom, in color, with leaves */
-        "    " MAGENTA "\\" RESET BOLD RED " _(_)_ " RESET MAGENTA "/" RESET "\n"
-        "   " MAGENTA "-" RESET BOLD RED "(_)" YELLOW "@" RED "(_)" RESET MAGENTA "-" RESET "\n"
-        "    " MAGENTA "/" RESET BOLD RED " (_)‾ " RESET MAGENTA "\\" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "      " GREEN "\\_|_/" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "      " GREEN "\\_|" RESET "\n"
-        "   " GREEN "\\_" RESET GREEN "|" RESET GREEN "_/" RESET "\n"
-        "        " GREEN "|" RESET "\n"
-        "     " GREEN "~~~~~~~~~~~" RESET "\n"
+        /* Frame 6: full bloom (same shape as the original frame 4, colorized) */
+        "\n"
+        "     " BOLD RED "_(_)_" RESET "\n"
+        "    " BOLD RED "(_)" YELLOW "@" RED "(_)" RESET "\n"
+        "      " BOLD RED "(_)" RESET GREEN "\\" RESET "\n"
+        "       " GREEN "|" RESET "\n"
+        "     " GREEN "\\ | /" RESET "\n"
+        "      " GREEN "\\|/" RESET "\n"
+        "    " GREEN "=======" RESET "\n"
     };
 
     int num_frames = sizeof(frames) / sizeof(frames[0]);
